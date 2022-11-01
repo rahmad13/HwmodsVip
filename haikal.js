@@ -38,7 +38,7 @@ const content = JSON.stringify(m.message)
 //=================================================//
 const kalimage = fs.readFileSync ('./baseikal/image/marvel.jpg')
 const thumbnail = fs.readFileSync ('./baseikal/image/marvel.jpg')
-const mekih = fs.readFileSync ('./baseikal/image/marvel.jpeg')
+const mekih = fs.readFileSync ('./baseikal/image/marvel.jpg')
 const { mediafireDl } = require('./baseikal/lib/mediafire.js')
 const banned = JSON.parse(fs.readFileSync('./baseikal/dbnye/banned.json'))
 const ntilink = JSON.parse(fs.readFileSync("./baseikal/lib/antilink.json"))
