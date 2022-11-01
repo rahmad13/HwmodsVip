@@ -36,9 +36,9 @@ const { FajarNews, BBCNews, metroNews, CNNNews, iNews, KumparanNews, TribunNews,
 //=================================================//
 const content = JSON.stringify(m.message)
 //=================================================//
-const kalimage = fs.readFileSync ('./baseikal/image/hwmodsgans.jpg')
-const thumbnail = fs.readFileSync ('./baseikal/image/mamak.jpg')
-const mekih = fs.readFileSync ('./baseikal/image/deden.jpeg')
+const kalimage = fs.readFileSync ('./baseikal/image/marvel.jpg')
+const thumbnail = fs.readFileSync ('./baseikal/image/marvel.jpg')
+const mekih = fs.readFileSync ('./baseikal/image/marvel.jpeg')
 const { mediafireDl } = require('./baseikal/lib/mediafire.js')
 const banned = JSON.parse(fs.readFileSync('./baseikal/dbnye/banned.json'))
 const ntilink = JSON.parse(fs.readFileSync("./baseikal/lib/antilink.json"))
